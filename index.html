@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>A Special Surprise for Madam Ji ❤️</title>
+  
+  <!-- Romantic Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-glow orb-1"></div>
+  <div class="ambient-glow orb-2"></div>
+  <div class="ambient-glow orb-3"></div>
+
+  <!-- Interactive Floating Petals & Hearts Canvas -->
+  <canvas id="canvas-petals"></canvas>
+
+  <!-- Audio Player Controller -->
+  <div class="music-pill" id="musicPill" title="Play / Pause Romantic Music">
+    <div class="disc-icon">
+      <span class="disc-center"></span>
+      <span class="music-note">♪</span>
+    </div>
+    <div class="music-info">
+      <span class="music-title">Apna Bana Le ♪</span>
+      <span class="music-status" id="musicStatus">Click to play</span>
+    </div>
+    <audio id="bgAudio" loop preload="auto" playsinline>
+      <source src="assets/music/apna-bana-le.mp3" type="audio/mpeg">
+      <source src="assets/music/apna-bana-le.m4a" type="audio/mp4">
+    </audio>
+    <video id="bgVideoAudio" playsinline loop preload="auto" style="position:fixed;bottom:0;left:0;width:1px;height:1px;opacity:0.001;pointer-events:none;z-index:-9999;">
+      <source src="assets/music/apna-bana-le.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Main Website Container -->
+  <main class="page-container">
+
+    <!-- STEP 1: WELCOME SCREEN -->
+    <section id="step-1" class="story-section active">
+      <div class="glass-card story-card welcome-card">
+        <div class="tag-badge">
+          <span class="sparkle">✨</span> Only for Madam Ji <span class="sparkle">✨</span>
+        </div>
+
+        <h1 class="welcome-heading">
+          Hey <span class="script-highlight">Madam Ji</span>... <span class="pulsing-heart">❤️</span>
+        </h1>
+
+        <p class="welcome-subtext">
+          Aaj aapke liye kuch bohot special banaya hai.
+        </p>
+
+        <div class="romantic-divider">
+          <span class="line"></span>
+          <span class="divider-icon">❦</span>
+          <span class="line"></span>
+        </div>
+
+        <p class="welcome-invitation">
+          Bas ek gehri saans lo, thoda waqt nikalo, aur is choti si duniya me aage badho...
+        </p>
+
+        <button class="romantic-btn btn-next" data-target="step-2" id="btnToStep2">
+          <span class="btn-text">Let's Begin ♡</span>
+          <span class="btn-glow"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- STEP 2: WHY YOU ARE SPECIAL (Choti Choti Baatein) -->
+    <section id="step-2" class="story-section hidden">
+      <div class="glass-card story-card">
+        <div class="tag-badge">
+          <span class="sparkle">🌸</span> Just For You <span class="sparkle">✨</span>
+        </div>
+
+        <h2 class="section-heading">
+          Aap Itni <span class="script-highlight">Khaas</span> Kyun Ho?
+        </h2>
+
+        <p class="section-description">
+          Kuch aisi baatein jo shayad maine roz nahi kahi, par mere dil me hamesha rehti hain...
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <span class="feature-icon">✨</span>
+            <h3 class="feature-title">Aapki Smile</h3>
+            <p class="feature-text">Aapki ek smile kisi bhi kharab din ko instant perfect bana deti hai. It really has magic!</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">🧸</span>
+            <h3 class="feature-title">Aapke Nakhre</h3>
+            <p class="feature-text">Thoda gussa, thodi narazgi... par sach kahu toh har andaaz me aap sabse pyaari lagti ho.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">💫</span>
+            <h3 class="feature-title">Aapka Saath</h3>
+            <p class="feature-text">Jab aap saath hoti ho, tab kisi cheez ki fikar nahi hoti. Bas sukoon hota hai.</p>
+          </div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="romantic-btn btn-secondary btn-back" data-target="step-1">
+            <span>← Back</span>
+          </button>
+          <button class="romantic-btn btn-next" data-target="step-3">
+            <span class="btn-text">Dil Ki Baat ♡ →</span>
+            <span class="btn-glow"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 3: DIL KI BAAT - SHERSHAAH DIALOGUE (PURE HINGLISH) -->
+    <section id="step-3" class="story-section hidden">
+      <div class="glass-card story-card shershaah-card">
+        <div class="tag-badge">
+          <span class="sparkle">🎬</span> Dil Ki Baat <span class="sparkle">✨</span>
+        </div>
+
+        <h2 class="section-heading">
+          Kuch Baatein Jo <span class="script-highlight">Dil Se</span> Hain...
+        </h2>
+
+        <!-- The Iconic Dialogue Block in Hinglish -->
+        <div class="dialogue-box">
+          <span class="quote-icon quote-open">“</span>
+          
+          <p class="dialogue-line line-intro">
+            Mujhe kuch dikhai nahi de raha hai...
+          </p>
+          
+          <p class="dialogue-line highlight-line">
+            Siwaye us zindagi ke jo maine tere saath bitani hai.
+          </p>
+          
+          <div class="dialogue-break"></div>
+
+          <p class="dialogue-line">
+            Sab kuch toh jaan liya tune mere baare mein...
+          </p>
+          
+          <p class="dialogue-line">
+            Accha, bura, jaisa bhi hoon...
+          </p>
+          
+          <p class="dialogue-line love-line">
+            Pyaar karta hoon tujhse. <span class="pulsing-heart">❤️</span>
+          </p>
+
+          <span class="quote-icon quote-close">”</span>
+        </div>
+
+        <p class="dialogue-caption">
+          — <em>Shershaah</em> | Bilkul waise hi, mera dil har pal bas aapko hi chunta hai.
+        </p>
+
+        <div class="nav-buttons">
+          <button class="romantic-btn btn-secondary btn-back" data-target="step-2">
+            <span>← Back</span>
+          </button>
+          <button class="romantic-btn btn-next" data-target="step-4">
+            <span class="btn-text">Ek Chota Sa Vaada ♡ →</span>
+            <span class="btn-glow"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 4: A SWEET PROMISE (Vaada) -->
+    <section id="step-4" class="story-section hidden">
+      <div class="glass-card story-card">
+        <div class="tag-badge">
+          <span class="sparkle">🤞</span> Mera Vaada <span class="sparkle">✨</span>
+        </div>
+
+        <h2 class="section-heading">
+          Aapke Liye Mere <span class="script-highlight">Promises</span>...
+        </h2>
+
+        <p class="section-description">
+          Life chahe jaisi bhi ho, mere ye promises hamesha aapke saath rahenge:
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <span class="feature-icon">🤍</span>
+            <h3 class="feature-title">Hamesha Sununga</h3>
+            <p class="feature-text">Aapke saare dukh, sukh, complaints aur random baatein... hamesha bina bore huye sununga.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">🛡️</span>
+            <h3 class="feature-title">Har Mood Me Saath</h3>
+            <p class="feature-text">Chahe aap khush ho ya kisi baat pe gussa, main hamesha aapke side aur aapke saath rahunga.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">🌹</span>
+            <h3 class="feature-title">Respect & Endless Love</h3>
+            <p class="feature-text">Har ek din aapko utna hi special aur valued feel karwaunga jitna aap mere liye ho.</p>
+          </div>
+        </div>
+
+        <div class="nav-buttons">
+          <button class="romantic-btn btn-secondary btn-back" data-target="step-3">
+            <span>← Back</span>
+          </button>
+          <button class="romantic-btn btn-next" data-target="step-5">
+            <span class="btn-text">Aakhri Sawaal... ❤️ →</span>
+            <span class="btn-glow"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 5: THE FINAL PROPOSAL -->
+    <section id="step-5" class="story-section hidden">
+      <div class="glass-card story-card proposal-card">
+        <div class="tag-badge ring-badge">
+          <span class="sparkle">💍</span> The Big Question <span class="sparkle">💍</span>
+        </div>
+
+        <div class="proposal-ring-icon">
+          <span>💍</span>
+        </div>
+
+        <h2 class="section-heading proposal-heading">
+          Madam Ji... <br><span class="script-highlight big-script">Will You Be Mine Forever?</span>
+        </h2>
+
+        <p class="proposal-text">
+          Meri har subah aapki hasi se shuru ho aur har shaam aapke saath dhal jaye... <br>
+          Kya aap meri zindagi ka sabse khoobsurat hissa banogi?
+        </p>
+
+        <!-- Interactive Yes & Playful Runaway/No Buttons -->
+        <div class="proposal-buttons-wrap">
+          <button class="romantic-btn btn-yes" id="btnYes">
+            <span class="btn-text">YES! Hamesha ❤️</span>
+            <span class="btn-glow"></span>
+          </button>
+          <button class="romantic-btn btn-no" id="btnNo">
+            <span>Sochne do... 😜</span>
+          </button>
+        </div>
+
+        <p class="hint-text" id="playfulHint">Tip: "Sochne do" button click karne ka try mat karna! 😉</p>
+
+        <div class="nav-buttons" style="margin-top: 24px;">
+          <button class="romantic-btn btn-secondary btn-back" data-target="step-4">
+            <span>← Back</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CELEBRATION MODAL OVERLAY -->
+  <div class="celebration-overlay hidden" id="celebrationOverlay">
+    <div class="glass-card celebration-card">
+      <div class="celebration-emojis">🎉 💍 💖 🌹 🥳</div>
+      <h2 class="celebration-title">
+        YAYYY! <br><span class="script-highlight">Madam Ji Said YES!</span> ❤️
+      </h2>
+      <p class="celebration-message">
+        You have no idea kitna khush hoon main aaj! <br>
+        Thank you for choosing me. I promise hamesha aapke chehre pe aisi hi pyari smile rakhunga!
+      </p>
+      <div class="romantic-divider">
+        <span class="line"></span>
+        <span class="divider-icon">❦</span>
+        <span class="line"></span>
+      </div>
+      <p class="celebration-love">I Love You So Much, Madam Ji! Forever & Always. ✨</p>
+      <button class="romantic-btn" id="btnCloseCelebration">
+        <span class="btn-text">Always & Forever ♡</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
